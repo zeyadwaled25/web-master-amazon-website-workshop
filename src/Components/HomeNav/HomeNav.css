@@ -1,0 +1,29 @@
+.navbar{
+    background-color: #232F3E;
+    color: #fff;
+}
+.navbar a{
+    color: #fff;
+}
+.navbar a:hover{
+    color: #d1cece;
+}
+.navbar-toggler {
+    border-color: white; /* Change border color to white */
+  }
+  
+  .navbar-toggler-icon {
+    filter: invert(1); /* Inverts the color to white */
+  }
+  
+  /* Make navbar items responsive */
+  @media (max-width: 699px) {
+    .navbar-nav {
+      flex-direction: column;
+      text-align: center;
+    }
+    .nav-item{
+        padding: 0 10px;
+    }
+  }
+  

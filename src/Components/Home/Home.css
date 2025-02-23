@@ -1,0 +1,14 @@
+.main{
+    background-color: #666666;
+    margin-top: -100px;
+  position: relative;
+  top: 0px;
+}
+.photos{
+    background-color: #fff;
+    position: relative;
+    top: -100px;
+}
+.swiper{
+    position: relative;
+}

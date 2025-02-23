@@ -1,4 +1,3 @@
-import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Scrollbar,FreeMode,Pagination, Navigation } from 'swiper/modules';

@@ -1,9 +1,8 @@
 import { useFormik } from "formik";
-import React from "react";
 import * as yup from "yup";
 import "./Login.css";
 import { loginUser } from "../fakeAuthService/fakeAuthService"; // Import API
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import amazon from "./amazon.jpg";
 import Footer from "../Footer/Footer";
 
@@ -48,7 +47,7 @@ function Login() {
     <>
       <div className="container register   d-flex justify-content-center align-items-center flex-column mb-1 w-50 p-2 rounded rounded-3 border-black border-1 border mt-1">
         <div className="w-25">
-          <img src={amazon} alt="amazon-logo" className="w-100" srcset="" />
+          <img src={amazon} alt="amazon-logo" className="w-100" srcSet="" />
         </div>
         <form onSubmit={formik.handleSubmit} className="w-50 ">
         <h1>Sign in</h1>

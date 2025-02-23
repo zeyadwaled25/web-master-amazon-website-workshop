@@ -1,0 +1,32 @@
+:root {
+  --margin-bottom: 13.54px;
+}
+
+.product-page {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 20px 30px;
+}
+.filter-navbar {
+  min-width: 225px;
+}
+.filter-navbar div p {
+  margin-bottom: var(--margin-bottom);
+}
+.filter-navbar .review ul {
+  display: flex;
+  gap: 4.45px;
+}
+.filter-navbar .review ul li {
+  color: #FFCC00;
+}
+
+
+.product-page .products {
+  margin: 0;
+}
+.product-page .products .product-card {
+  border: 1px solid gray;
+  padding: 0;
+}

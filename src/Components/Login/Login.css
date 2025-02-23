@@ -1,0 +1,18 @@
+.amazon p::before{
+    position: absolute;
+    content: '';
+    width: 41%;
+    height: 2px;
+    background-color: rgb(171, 195, 195);
+    left: 0;
+    top: 50%;
+}
+.amazon p::after{
+    position: absolute;
+    content: '';
+    width: 41%;
+    height: 2px;
+    background-color: rgb(171, 195, 195);
+    right: 0;
+    top: 50%;
+}

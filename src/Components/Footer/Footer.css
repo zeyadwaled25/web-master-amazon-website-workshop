@@ -1,0 +1,58 @@
+.footer{
+    left: 35%;
+    bottom: 0;
+    margin-top: 15%;
+}
+@media (min-width:100px) and (max-width:669px) {  
+     
+.footer p {
+    width: 100%;
+    font-size: 12px;
+    margin-top: 5px;
+
+}
+    
+}
+
+
+ @media (min-width: 570px) and (max-width: 699px) {  
+   
+} 
+
+@media (min-width: 700px) and (max-width: 890px) {  
+
+  
+}
+
+/* Large Tablet Screens (891px - 990px) */
+@media (min-width: 891px) and (max-width: 990px) {  
+ 
+}
+
+/* Large Screens (991px - 1200px) */
+@media (min-width: 991px) and (max-width: 1200px) {
+  
+}
+
+ 
+ @media (min-width:570px) and (max-width:699px)
+ {  
+ 
+ }
+ 
+ 
+  @media (min-width:700px) and (max-width:890px)
+ { 
+   
+ }
+ 
+ 
+  @media (min-width:891px) and (max-width:990px)
+ {  
+ }
+ 
+ @media (min-width:991px) and (max-width:1200px)
+ {
+  
+  
+ } 

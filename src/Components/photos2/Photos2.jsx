@@ -15,7 +15,24 @@ export default function Photos() {
        
 
         <Swiper
-        slidesPerView={5}
+       breakpoints={{
+        '@0.00': {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        '@0.75': {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        '@1.00': {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        '@1.50': {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      }}
         freeMode={true}
           scrollbar={{
             hide: true,
@@ -25,17 +42,17 @@ export default function Photos() {
           modules={[Scrollbar,Pagination, Navigation]}
           className="mySwiper mt-5"
         >
-          <SwiperSlide><img src="src\assets\9.png" alt="" /></SwiperSlide>
+          <SwiperSlide><img src="src\assets\9 (1).png" alt="" /></SwiperSlide>
           <SwiperSlide><img src="src\assets\10.png" alt="" /></SwiperSlide>
           <SwiperSlide><img src="src\assets\11.png" alt="" /></SwiperSlide>
           <SwiperSlide><img src="src\assets\12.png" alt="" /></SwiperSlide>
           <SwiperSlide><img src="src\assets\13.png" alt="" /></SwiperSlide>
-          <SwiperSlide><img src="src\assets\9.png" alt="" /></SwiperSlide>
+          <SwiperSlide><img src="src\assets\9 (1).png" alt="" /></SwiperSlide>
           <SwiperSlide><img src="src\assets\10.png" alt="" /></SwiperSlide>
           <SwiperSlide><img src="src\assets\11.png" alt="" /></SwiperSlide>
           <SwiperSlide><img src="src\assets\12.png" alt="" /></SwiperSlide>
           <SwiperSlide><img src="src\assets\13.png" alt="" /></SwiperSlide>
-          <SwiperSlide><img src="src\assets\9.png" alt="" /></SwiperSlide>
+          <SwiperSlide><img src="src\assets\9 (1).png" alt="" /></SwiperSlide>
           <SwiperSlide><img src="src\assets\10.png" alt="" /></SwiperSlide>
           <SwiperSlide><img src="src\assets\11.png" alt="" /></SwiperSlide>
           <SwiperSlide><img src="src\assets\12.png" alt="" /></SwiperSlide>

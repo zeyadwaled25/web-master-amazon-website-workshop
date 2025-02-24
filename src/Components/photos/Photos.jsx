@@ -1,3 +1,4 @@
+import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Scrollbar,FreeMode,Pagination, Navigation } from 'swiper/modules';
@@ -12,10 +13,28 @@ export default function Photos() {
     return (
       <>
         <Swiper
-        slidesPerView={5}
+       
         freeMode={true}
           scrollbar={{
             hide: true,
+          }}
+          breakpoints={{
+            '@0.00': {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            '@0.75': {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            '@1.00': {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            '@1.50': {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
           }}
         
           navigation={true}

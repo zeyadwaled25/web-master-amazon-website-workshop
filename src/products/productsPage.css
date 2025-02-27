@@ -4,12 +4,28 @@
 
 .product-page {
   display: flex;
-  justify-content: space-between;
   gap: 15px;
   margin: 20px 30px;
 }
 .filter-navbar {
   min-width: 225px;
+}
+@media (max-width: 767px) {
+  .product-page {
+    margin: 15px 20px;
+  }
+  .filter-navbar {
+    min-width: 185px;
+  }
+}
+@media (max-width: 576px) {
+  .product-page {
+    gap: 10px;
+    margin: 10px;
+  }
+  .filter-navbar {
+    min-width: 160px;
+  }
 }
 .filter-navbar div p {
   margin-bottom: var(--margin-bottom);
@@ -22,11 +38,69 @@
   color: #FFCC00;
 }
 
+.products:has(.noavailable) {
+  width: 100% !important;
+}
 
 .product-page .products {
   margin: 0;
 }
-.product-page .products .product-card {
-  border: 1px solid gray;
-  padding: 0;
+.product-page .products .card img {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+.add-to-cart {
+  width: fit-content;
+}
+
+
+/* زر الفلاتر يكون ثابتًا في الأعلى لكن يظهر فقط في الشاشات الصغيرة */
+@media (max-width: 576px) {
+  .filter-btn {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  /* نافذة الفلاتر المنبثقة */
+  .filter-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    min-width: 300px;
+    height: 100vh;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  /* عند فتح الفلتر */
+  .filter-sidebar.show {
+    left: 0;
+  }
+
+  /* زر إغلاق الفلتر */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}/* في الشاشات الكبيرة نخفي الزر */
+@media (min-width: 576px) {
+  button.filter-btn {
+    display: none;
+  }
 }

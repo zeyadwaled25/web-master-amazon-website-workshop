@@ -1,4 +1,3 @@
-import React from "react";
 import { HiMiniBars3 } from "react-icons/hi2";
 
 import "./HomeNav.css"; // Custom styles
@@ -13,7 +12,7 @@ const Header = () => {
           <a className="navbar-brand" href="#">All</a>
         
         </button>
-       
+
         {/* Toggle Button for Small Screens */}
         <button
           className="navbar-toggler "
@@ -40,7 +39,7 @@ const Header = () => {
               <a className="nav-link" href="#">Best Sellers</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Today's Deals</a>
+              <a className="nav-link" href="#">{`Today's Deals`}</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">Mobiles</a>

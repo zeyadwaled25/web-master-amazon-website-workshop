@@ -1,6 +1,5 @@
-import React from "react";
 import { CiLocationOn } from "react-icons/ci";
-import './NavBar.css'
+import './Navbar.css'
 
 
 import { FaSearch} from "react-icons/fa";
@@ -10,7 +9,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-2 px-lg-5 py-2">
       <div className="container-fluid">
         {/* Left Section - Logo & Location */}
-        <a className="navbar-brand d-flex align-items-center" href={'./home'}>
+        <a className="navbar-brand d-flex align-items-center" href={'./'}>
           <img
             src="src\assets\Amazon.png"
             alt="Amazon Logo"

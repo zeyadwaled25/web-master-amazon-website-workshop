@@ -6,7 +6,7 @@ import Slider from "../Slider/Slider";
 import './Home.css'
 import Photos from "../photos/Photos";
 import Photos2 from "../photos2/Photos2";
-import Navbar from "../Navbar/NavBar"
+import Navbar from "../Navbar/Navbar"
 import HomeNav from "../HomeNav/HomeNav"
 
 export default function Home() {

@@ -1,0 +1,8 @@
+.section-container {
+    gap: 20px; 
+    background-color: rgb(107, 105, 105);
+}
+.section-container > div {
+    flex: 0 0 calc(25% - 20px); 
+    box-sizing: border-box;
+}

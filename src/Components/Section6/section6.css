@@ -2,3 +2,20 @@
    
     font-family: Arial, sans-serif;
 }
+.images img{
+    width: 50%;
+}
+.images2 img{
+    width: 80%;
+}
+.gallery{
+    height: 100% !important;
+    
+}
+@media (min-width:998px) {
+    .gallery{
+        width: 100%;
+        margin-right: 0 30px;
+    }
+    
+}

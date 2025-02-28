@@ -17,17 +17,19 @@ export default function Home() {
         <div className="head p-0 w-100  m-0">
           <Slider></Slider>
         </div>
+      
+        <div className="div" style={{ backgroundColor: " rgb(107, 105, 105)" }}>
         <Section4 />
-        <div style={{ backgroundColor: " rgb(107, 105, 105)" }}>
-          <div className="main p-3 ">
+
+          <div className="main p-4 ">
             <div
               className="photos p-3 "
-              style={{ position: "relative", top: "15px" }}
+              
             >
               <h5>Best Sellers in Clothing & Accessories</h5>
               <Photos className=" swiper px-3 "></Photos>
             </div>
-            <div className="mt-5">
+            <div className="section6">
               <Section6 />
             </div>
             <div

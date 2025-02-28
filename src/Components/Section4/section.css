@@ -1,8 +1,12 @@
 .section-container {
     gap: 20px; 
-    background-color: rgb(107, 105, 105);
+    position: relative;
+    background-color:transparent;
+   
+    top: -200px;
 }
 .section-container > div {
-    flex: 0 0 calc(25% - 20px); 
+    flex: 0 0 calc(20% - 20px); 
     box-sizing: border-box;
+    padding: 20px;
 }

@@ -1,14 +1,18 @@
+.div{
+    margin-top: -30px;
+}
 .main{
     background-color: #666666;
-    margin-top: -100px;
-  position: relative;
-  top: 0px;
+
 }
 .photos{
     background-color: #fff;
     position: relative;
-    top: -100px;
+    top: -200px;
 }
 .swiper{
     position: relative;
+}
+.section6{
+    margin-top: -150px;
 }

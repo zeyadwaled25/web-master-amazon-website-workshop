@@ -2,10 +2,10 @@ import "./section6.css";
 
 export default function Section6() {
   return (
-    <div className="container">
-      <div className="row justify-content-between" style={{ height: "100%" }}>
-        <div className="col-12 col-md-6 col-lg-3 mb-4">
-          <div className="p-3 bg-white ">
+    <div className=" container-fluid p-0">
+      <div className="row justify-content-around" >
+        <div className="col-12 col-md-6 col-lg-3 mb-4 " >
+          <div className="p-3 bg-white gallery ">
             <h4>Best Sellers in Toys & Games</h4>
             <img src="src/assets/ra.png" className="img-fluid" alt="Toy" />
             <p>
@@ -55,10 +55,10 @@ export default function Section6() {
           </div>
         </div>
 
-        <div className="col-12 col-md-6 col-lg-3 mb-4">
-          <div className="p-3 bg-white ">
+        <div className=" col-12 col-md-6 col-lg-3 mb-4">
+          <div className="p-3 bg-white  gallery">
             <h4>Customers’ Most-Loved Products</h4>
-            <div>
+            <div className="images">
               <img
                 src="src/assets/image 154.png"
                 className="img-fluid"
@@ -81,9 +81,9 @@ export default function Section6() {
         </div>
 
         <div className="col-12 col-md-6 col-lg-3 mb-4">
-          <div className="p-3 bg-white">
+          <div className="p-3 bg-white  gallery">
             <h4>Best Sellers in Beauty</h4>
-            <div>
+            <div className="images">
               <img
                 src="src/assets/image 158.png"
                 className="img-fluid"
@@ -109,13 +109,13 @@ export default function Section6() {
         </div>
 
         <div className="col-12 col-md-6 col-lg-3 mb-4">
-          <div className="p-3 bg-white ">
+          <div className="p-3 bg-white  gallery">
             <h4>
               Latest styles | Dresses,
               <br /> kurta & more | 50% -
             </h4>
-            <div className="d-flex justify-content-around flex-wrap">
-              <div className="text-center">
+            <div className="d-flex justify-content-around">
+              <div className="text-center images2">
                 <img
                   src="src/assets/image 162.png"
                   className="img-fluid"
@@ -123,7 +123,7 @@ export default function Section6() {
                 />
                 <p>Kurta & sets</p>
               </div>
-              <div className="text-center">
+              <div className="text-center images2">
                 <img
                   src="src/assets/image 163.png"
                   className="img-fluid"
@@ -132,8 +132,8 @@ export default function Section6() {
                 <p>Tops</p>
               </div>
             </div>
-            <div className="d-flex justify-content-around flex-wrap mt-2">
-              <div className="text-center">
+            <div className="d-flex justify-content-around  mt-2">
+              <div className="text-center images2">
                 <img
                   src="src/assets/image 164.png"
                   className="img-fluid"
@@ -141,7 +141,7 @@ export default function Section6() {
                 />
                 <p>Dresses</p>
               </div>
-              <div className="text-center">
+              <div className="text-center images2">
                 <img
                   src="src/assets/image 165.png"
                   className="img-fluid"

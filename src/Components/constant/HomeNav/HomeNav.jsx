@@ -2,17 +2,15 @@ import { HiMiniBars3 } from "react-icons/hi2";
 import "./HomeNav.css"; // Custom styles
 import { Link } from "react-router";
 
-const Header = () => {
+const HomeNav = () => {
   return (
     <nav className="navbar navbar-expand-lg px-1 ps-4">
       <div className="container-fluid">
         {/* Left Side - Menu Icon & Branding */}
-        <button className="btn text-light gap-1 me-2 d-flex justify-content-center align-items-center">
+        <Link to="/products" className="btn text-light navbar-brand gap-1 me-2 d-flex justify-content-center align-items-center">
           <HiMiniBars3 className=" fs-3 " />
-          <Link className="navbar-brand" to="/products">
             All
-          </Link>
-        </button>
+        </Link>
 
         {/* Toggle Button for Small Screens */}
         <button
@@ -95,4 +93,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HomeNav;

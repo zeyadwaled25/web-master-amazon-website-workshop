@@ -1,12 +1,12 @@
-import Slider from "../Slider/Slider";
+import Slider from "../homaPage/Slider/Slider";
 import "./Home.css";
-import Photos from "../photos/Photos";
-import Photos2 from "../photos2/Photos2";
-import Navbar from "../Navbar/Navbar";
-import HomeNav from "../HomeNav/HomeNav";
-import Section4 from "../Section4/Section4";
-import Section6 from "../Section6/Section6";
-import Footer from "../Footer/Footer";
+import Photos from "../homaPage/photos/Photos";
+import Photos2 from "../homaPage/photos2/Photos2";
+import Navbar from "../constant/Navbar/Navbar";
+import HomeNav from "../constant/HomeNav/HomeNav";
+import Section4 from "../homaPage/Section4/Section4";
+import Section6 from "../homaPage/Section6/Section6";
+import Footer from "../constant/Footer/Footer";
 
 export default function Home() {
   return (

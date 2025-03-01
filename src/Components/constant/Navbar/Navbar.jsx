@@ -1,10 +1,10 @@
 import { CiLocationOn } from "react-icons/ci";
 import "./Navbar.css";
-
 import { FaSearch } from "react-icons/fa";
 import { useContext } from "react";
-import { AuthContext } from "../../Context/AuthContext";
+import { AuthContext } from "../../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
@@ -19,14 +19,14 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-2 px-lg-5 py-2">
       <div className="container-fluid">
         {/* Left Section - Logo & Location */}
-        <a className="navbar-brand d-flex align-items-center" href={"./"}>
+        <Link className="navbar-brand d-flex align-items-center" to={"/"}>
           <img
             src="src\assets\Amazon.png"
             alt="Amazon Logo"
             height="50"
             className="me-2"
           />
-        </a>
+        </Link>
 
         <div className="d-flex align-items-center text-white">
           <CiLocationOn className="text-light fa-xl fa-bold me-1 mt-3" />
@@ -64,7 +64,7 @@ const Navbar = () => {
             </select>
           </div>
           <div className="me-3">
-            <p className="m-0 small text-secondary">Hello, Sign in</p>
+            <Link to="/login" className="m-0 small text-secondary">Hello, Sign in</Link>
             <select
               name=""
               id=""
@@ -78,8 +78,8 @@ const Navbar = () => {
           </div>
 
           <div className="cart d-flex align-items-center justify-content-center">
-            <img src="src\assets\cart.png" alt="" />
-            <p className=" mt-3">Cart</p>
+            <Link to={'/cart'} ><img src="src\assets\cart.png" alt="cart" /></Link>
+            <Link to={'/cart'} className=" mt-3">Cart</Link>
             {isLoggedIn && (
               <button
                 className="btn text-danger"

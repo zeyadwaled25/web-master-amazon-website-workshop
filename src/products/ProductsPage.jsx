@@ -2,8 +2,8 @@ import { useState } from "react";
 import FilterNavbar from "./FilterNavbar";
 import Products from "./Products";
 import './productsPage.css'
-import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
+import Navbar from "../components/constant/Navbar/Navbar";
+import Footer from "../components/constant/Footer/Footer";
 
 function MainComponent() {
   const [selectedCategory, setSelectedCategory] = useState("all");

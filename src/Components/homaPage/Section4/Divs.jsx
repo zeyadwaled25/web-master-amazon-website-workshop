@@ -6,16 +6,16 @@ export default function Divs(props) {
         <div>
           <div>
             <img src={props.img1} style={{ width: "100px" }} />
-            <p style={{ fontSize: "14px" }}> {props.p1} </p>
+            <div style={{ fontSize: "14px" }}> {props.p1} </div>
           </div>
           <img src={props.img2} style={{ width: "100px" }} />
-          <p style={{ fontSize: "14px" }}>{props.p3} </p>
+          <div style={{ fontSize: "14px" }}>{props.p3} </div>
         </div>
         <div>
           <img src={props.img3} style={{ width: "100px" }} />
-          <p style={{ fontSize: "14px" }}>{props.p2} </p>
+          <div style={{ fontSize: "14px" }}>{props.p2} </div>
           <img src={props.img4} style={{ width: "100px" }} />
-          <p style={{ fontSize: "14px" }}> {props.p4} </p>
+          <div style={{ fontSize: "14px" }}> {props.p4} </div>
         </div>
       </div>
       <div>

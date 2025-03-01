@@ -1,6 +1,6 @@
 import { HiMiniBars3 } from "react-icons/hi2";
-
 import "./HomeNav.css"; // Custom styles
+import { Link } from "react-router";
 
 const Header = () => {
   return (
@@ -8,9 +8,10 @@ const Header = () => {
       <div className="container-fluid">
         {/* Left Side - Menu Icon & Branding */}
         <button className="btn text-light gap-1 me-2 d-flex justify-content-center align-items-center">
-          <HiMiniBars3 className=" fs-3 "/>
-          <a className="navbar-brand" href="#">All</a>
-        
+          <HiMiniBars3 className=" fs-3 " />
+          <Link className="navbar-brand" to="/products">
+            All
+          </Link>
         </button>
 
         {/* Toggle Button for Small Screens */}
@@ -30,40 +31,62 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav d-flex flex-row flex-wrap">
             <li className="nav-item">
-              <a className="nav-link" href="#">Amazon mini TV</a>
+              <Link className="nav-link" to="/products">
+                Amazon mini TV
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Sell</a>
+              <Link className="nav-link" to="/products">
+                Sell
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Best Sellers</a>
+              <Link className="nav-link" to="/products">
+                Best Sellers
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">{`Today's Deals`}</a>
+              <Link className="nav-link" to="/products">{`Today's Deals`}</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Mobiles</a>
+              <Link className="nav-link" to="/products">
+                Mobiles
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Customer Service</a>
+              <Link className="nav-link" to="/products">
+                Customer Service
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Prime</a>
+              <Link className="nav-link" to="/products">
+                Prime
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Electronics</a>
+              <Link className="nav-link" to="/products">
+                Electronics
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Fashion</a>
+              <Link className="nav-link" to="/products">
+                Fashion
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">New Releases</a>
+              <Link className="nav-link" to="/products">
+                New Releases
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Home & Kitchen</a>
+              <Link className="nav-link" to="/products">
+                Home & Kitchen
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Amazon Pay</a>
+              <Link className="nav-link" to="/products">
+                Amazon Pay
+              </Link>
             </li>
           </ul>
         </div>

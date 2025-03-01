@@ -1,5 +1,4 @@
-import React from "react";
-import './Footer.css'
+import "./Footer.css";
 
 export default function Footer() {
   return (
@@ -68,7 +67,11 @@ export default function Footer() {
           {/* Language and Country Selector */}
           <div className="row justify-content-center mt-4">
             <div className="col-12 col-md-6 d-flex justify-content-center align-items-center gap-3">
-              <img src="src/assets/Amazon.png" alt="Amazon Logo" className="img-fluid" />
+              <img
+                src="src/assets/Amazon.png"
+                alt="Amazon Logo"
+                className="img-fluid"
+              />
               <div className="d-flex align-items-center gap-2 border p-2">
                 <svg
                   width="18"
@@ -94,7 +97,10 @@ export default function Footer() {
                     d="M4 0.599998L7.4641 5.4H0.535898L4 0.599998Z"
                     fill="#B4B4B4"
                   />
-                  <path d="M4 13.4L7.4641 8.6H0.535898L4 13.4Z" fill="#B4B4B4" />
+                  <path
+                    d="M4 13.4L7.4641 8.6H0.535898L4 13.4Z"
+                    fill="#B4B4B4"
+                  />
                 </svg>
               </div>
               <div className="d-flex align-items-center gap-2 border p-2">
@@ -163,7 +169,9 @@ export default function Footer() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 text-center">
-              <p className="m-0">1996-2024, Amazon.com, Inc. or its affiliates</p>
+              <p className="m-0">
+                1996-2024, Amazon.com, Inc. or its affiliates
+              </p>
             </div>
           </div>
         </div>

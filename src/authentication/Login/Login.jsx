@@ -5,9 +5,13 @@ import { loginUser } from "../fakeAuthService/fakeAuthService"; // Import API
 import { useNavigate } from "react-router-dom";
 import amazon from "./amazon.jpg";
 import Footer from "../Footer/Footer";
+import { useContext } from "react";
+import { AuthContext } from "../../Context/AuthContext";
+
 
 function Login() {
   const navigate = useNavigate();
+  const {isLoggedIn,setIsLoggedIn}=useContext(AuthContext)
 
   const validationSchema = yup.object({
     phone: yup
@@ -36,8 +40,10 @@ function Login() {
       if (response.success) {
           alert(response.message);
           navigate("/"); // Redirect after successful login
+          setIsLoggedIn(true)
       } else {
           alert(response.message); // Show error message
+          setIsLoggedIn(false)
       }
   } catch (error) {
       console.error("Login error:", error);

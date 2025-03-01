@@ -2,12 +2,14 @@ import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 
 export const WishlistContext = createContext();
-export default function WishlistContextProvider({ children }) {
+
+export function WishlistContextProvider({ children }) { // Ensure this is a named export
   const [NumberOfFavourite, setNumberOfFavourite] = useState(0);
 
   const headers = {
     token: localStorage.getItem("token"),
   };
+
   function addProductToWishlist(productId) {
     return axios
       .post(
@@ -22,6 +24,7 @@ export default function WishlistContextProvider({ children }) {
       .then((res) => res)
       .catch((err) => err);
   }
+
   function getWishlist() {
     return axios
       .get("https://ecommerce.routemisr.com/api/v1/wishlist", {
@@ -30,6 +33,7 @@ export default function WishlistContextProvider({ children }) {
       .then((res) => res)
       .catch((err) => err);
   }
+
   function clearProduct(wId) {
     return axios
       .delete(`https://ecommerce.routemisr.com/api/v1/wishlist/${wId}`, {

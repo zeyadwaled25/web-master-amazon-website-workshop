@@ -119,7 +119,7 @@ function Products({ selectedCategory, selectedPriceRange }) {
   return (
     <div className="products row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
       {filteredProducts.length > 0 ? (
-        data?.data.data.map((product) => (
+        filteredProducts.map((product) => (
           <div key={product.id} className="col mb-4">
             <div className="card gap-3 h-100">
               <img

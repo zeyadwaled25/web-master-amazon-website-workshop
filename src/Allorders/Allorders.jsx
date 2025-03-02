@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from './../../Components/constant/Navbar/Navbar';
-import Footer from './../../Components/constant/Footer/Footer';
+import Navbar from '../Components/constant/Navbar/Navbar';
+import Footer from '../Components/constant/Footer/Footer';
 
 export default function Orders() {
     const [counter, setCounter] = useState(0);

@@ -1,15 +1,62 @@
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../context/CartContext";
+import { WishlistContext } from "../context/WishlistContext"; // Import WishlistContext
 import useProduct from "../Hooks/UseProduct";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
+import { FaHeart, FaRegHeart } from "react-icons/fa"; // Import heart icons
 
 function Products({ selectedCategory, selectedPriceRange }) {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentProductId, setcurrentProductId] = useState(0);
   const [loading, setloading] = useState(false);
-  let { addProductToCart , setNumOfCartItems} = useContext(CartContext);
+
+  const { addProductToCart, setNumOfCartItems } = useContext(CartContext);
+  const { addProductToWishlist, clearProduct, NumberOfFavourite } =
+    useContext(WishlistContext); // Use WishlistContext
+
+  const [wishlist, setWishlist] = useState([]); // Local state to track wishlist items
+
+  // Fetch wishlist on component mount
+  useEffect(() => {
+    const fetchWishlist = async () => {
+      try {
+        const response = await getWishlist();
+        if (response.data?.status === "success") {
+          setWishlist(response.data.data.map((item) => item._id));
+        }
+      } catch (error) {
+        console.error("Error fetching wishlist:", error);
+      }
+    };
+    fetchWishlist();
+  }, []);
+
+  // Function to toggle wishlist
+  const toggleWishlist = async (productId) => {
+    if (wishlist.includes(productId)) {
+      // Remove from wishlist
+      const response = await clearProduct(productId);
+      if (response.data?.status === "success") {
+        setWishlist(wishlist.filter((id) => id !== productId));
+        toast.success("Removed from wishlist", {
+          duration: 2000,
+          position: "top-right",
+        });
+      }
+    } else {
+      // Add to wishlist
+      const response = await addProductToWishlist(productId);
+      if (response.data?.status === "success") {
+        setWishlist([...wishlist, productId]);
+        toast.success("Added to wishlist", {
+          duration: 2000,
+          position: "top-right",
+        });
+      }
+    }
+  };
 
   async function addProduct(productId) {
     setcurrentProductId(productId);
@@ -18,12 +65,11 @@ function Products({ selectedCategory, selectedPriceRange }) {
     console.log(response);
     if (response.data.status === "success") {
       setloading(false);
-      setNumOfCartItems(response.data.numOfCartItems)
+      setNumOfCartItems(response.data.numOfCartItems);
       toast.success(response.data.message, {
         duration: 2000,
         position: "top-right",
       });
-
     } else {
       setloading(false);
       toast.error(response.data.message, {
@@ -112,6 +158,17 @@ function Products({ selectedCategory, selectedPriceRange }) {
                     className="btn btn-warning mt-auto rounded-pill add-to-cart d-flex"
                   >
                     Add to cart
+                  </button>
+                  {/* Favourite Icon */}
+                  <button
+                    onClick={() => toggleWishlist(product.id)}
+                    className="btn btn-link text-danger p-0"
+                  >
+                    {wishlist.includes(product.id) ? (
+                      <FaHeart size={24} /> // Filled heart if in wishlist
+                    ) : (
+                      <FaRegHeart size={24} /> // Outline heart if not in wishlist
+                    )}
                   </button>
                 </div>
 

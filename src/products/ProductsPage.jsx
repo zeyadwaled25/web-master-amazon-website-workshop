@@ -2,9 +2,9 @@ import { useState } from "react";
 import FilterNavbar from "./FilterNavbar";
 import Products from "./Products";
 import './productsPage.css'
-import Navbar from "../components/constant/Navbar/Navbar";
-import Footer from "../components/constant/Footer/Footer";
 
+import Footer from "../Components/constant/Footer/Footer";
+import Navbar from '../Components/constant/Navbar/Navbar';
 function MainComponent() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedPriceRange, setSelectedPriceRange] = useState("all");

@@ -2,10 +2,14 @@ import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import style from "../ProductDetail/ProductDetail.module.css";
-import { CartContext } from "../../Context/CartContext";
+import { CartContext } from "../../context/CartContext";
 import toast from "react-hot-toast";
-import Navbar from "../../components/constant/Navbar/Navbar";
-import Footer from "../../components/constant/Footer/Footer";
+
+
+
+import Navbar from './../../Components/constant/Navbar/Navbar';
+import Footer from './../../Components/constant/Footer/Footer';
+
 
 export default function ProductDetail() {
   const [productDetails, setProductDetails] = useState([]);
@@ -62,7 +66,7 @@ export default function ProductDetail() {
 
   return (
     <>
-      <Navbar />
+      <Navbar/>
       <div className="container d-flex justify-content-center align-items-center min-vh-100 py-5">
         <div className="row ">
           <div className="col-md-4 ">
@@ -185,7 +189,7 @@ export default function ProductDetail() {
           <div className="border-bottom  border-black   my-2"></div>
         </div>
       </div>
-      <div className="row gap-5  ">
+      <div className="row gap-5 p-xl-5 p-3  ">
         <div className="customer col-md-3 p-4">
           <h2 className="h6 fw-bold">Customer Reviews</h2>
           <div className="stars">
@@ -235,7 +239,7 @@ export default function ProductDetail() {
             </div>
           </div>
         </div>
-        <div className="col-md-7 py-4 ">
+        <div className="col-md-7 py-4 p-sm-4  ">
           <div className="customer-1">
             <h2 className="h6">Brooke</h2>
             <div className="stars fw-bold">
@@ -332,9 +336,9 @@ export default function ProductDetail() {
         </div>
       </div>
 
-      <div className="row mt-4">
+      <div className="row mt-4 p-xl-5 p-3">
         {relatedProducts.map((product) => (
-          <div key={product.id} className="col-md-2">
+          <div key={product.id} className="col-md-2 col-sm-6">
             <div className="product p-3 border rounded shadow-sm">
               <Link
                 to={`/productdetail/${product.id}/${product.category.name} `}
@@ -369,7 +373,7 @@ export default function ProductDetail() {
           </div>
         ))}
       </div>
-      <Footer />
+      <Footer/>
     </>
   );
 }

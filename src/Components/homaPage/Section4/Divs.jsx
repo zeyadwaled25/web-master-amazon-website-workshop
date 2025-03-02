@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function Divs(props) {
   return (
     <div style={{ backgroundColor: "white", height: "28rem ", width: "20rem" }}>
@@ -19,7 +21,7 @@ export default function Divs(props) {
         </div>
       </div>
       <div>
-        <p style={{ fontSize: "15px ", color: " #1F8394" }}>{props.end}</p>
+        <Link to={'./products'} style={{ fontSize: "15px ", color: " #1F8394",cursor:"pointer" }}>{props.end}</Link>
       </div>
     </div>
   );

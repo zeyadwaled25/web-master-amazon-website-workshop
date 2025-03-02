@@ -5,9 +5,11 @@ import { useContext } from "react";
 import { AuthContext } from "../../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../../context/CartContext";
 
 const Navbar = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
+  const{numOfCartItems}=useContext(CartContext)
   const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("authToken");
@@ -77,9 +79,11 @@ const Navbar = () => {
             <p className="m-0 fw-bold w-75">Returns & Orders</p>
           </div>
 
-          <div className="cart d-flex align-items-center justify-content-center">
-            <Link to={'/cart'} ><img src="src\assets\cart.png" alt="cart" /></Link>
-            <Link to={'/cart'} className=" mt-3">Cart</Link>
+          <div className="cart d-flex align-items-center justify-content-center flex-wrap">
+          <Link to={'/cart'} className=" text-warning   ">{numOfCartItems}  Cart</Link>
+          <Link to={'/cart'} ><img src="src\assets\cart.png" alt="cart" /></Link>
+        
+           
             {isLoggedIn && (
               <button
                 className="btn text-danger"

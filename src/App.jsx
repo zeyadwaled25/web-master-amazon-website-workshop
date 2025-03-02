@@ -13,6 +13,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
 import { CartContextProvider } from './context/CartContext'; // Import CartContextProvider
 import { WishlistContextProvider } from './context/WishlistContext'; // Import WishlistContextProvider
+import Allorders from './Allorders/Allorders'
 
 let query = new QueryClient()
 function App() {
@@ -30,7 +31,8 @@ function App() {
                   <Route path="/products" element={<ProductsPage />} />
                   <Route path="/cart" element={<Cart />} />
                   <Route path="/checkout" element={<Checkout />} />
-                  <Route path="/wishlist" element={<Wishlist />} />
+                  <Route path="/allorders" element={<Allorders/>} />
+                  <Route path="/products/wishlist" element={<Wishlist />} />
                   <Route path="/productdetail/:id/:category" element={<ProductDetail />} />
                 </Route>
               </Routes>

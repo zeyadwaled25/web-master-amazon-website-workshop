@@ -6,7 +6,7 @@ import Navbar from "../../components/constant/Navbar/Navbar";
 import Footer from "../../components/constant/Footer/Footer";
 
 export default function Cart() {
-  let { getLoggedUserCart, updateCartItemCount, deleteProductItem } =
+  let { getLoggedUserCart, updateCartItemCount, deleteProductItem,setNumOfCartItems } =
     useContext(CartContext);
   const [cartDetails, setCartDetails] = useState(null);
 
@@ -24,6 +24,7 @@ export default function Cart() {
     let response = await deleteProductItem(productId);
     console.log(response.data.data);
     setCartDetails(response.data.data);
+    setNumOfCartItems(response.data.numOfCartItems)
   }
   useEffect(() => {
     getCartItems();

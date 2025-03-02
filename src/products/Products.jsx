@@ -3,17 +3,14 @@ import { CartContext } from "../context/CartContext";
 import useProduct from "../Hooks/UseProduct";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
-import { WishlistContext } from "../context/WishlistContext";
 
 function Products({ selectedCategory, selectedPriceRange }) {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentProductId, setcurrentProductId] = useState(0);
   const [loading, setloading] = useState(false);
-  const [heart, setIsHeart] = useState(false);
-  const { addProductToWishlist } = useContext(WishlistContext);
+  let { addProductToCart , setNumOfCartItems} = useContext(CartContext);
 
-  let { addProductToCart } = useContext(CartContext);
   async function addProduct(productId) {
     setcurrentProductId(productId);
     setloading(true);
@@ -21,10 +18,12 @@ function Products({ selectedCategory, selectedPriceRange }) {
     console.log(response);
     if (response.data.status === "success") {
       setloading(false);
+      setNumOfCartItems(response.data.numOfCartItems)
       toast.success(response.data.message, {
         duration: 2000,
         position: "top-right",
       });
+
     } else {
       setloading(false);
       toast.error(response.data.message, {
@@ -33,18 +32,7 @@ function Products({ selectedCategory, selectedPriceRange }) {
       });
     }
   }
-  async function addToWish(id) {
-    setIsHeart(true);
-    const data = await addProductToWishlist(id);
-    setIsHeart(false);
 
-    if (data?.data?.status === "success") {
-      toast.success("Product added successfully to your wishlist");
-      console.log(data);
-    } else {
-      toast.error("not added");
-    }
-  }
   let { data, isError, error, isFetching, isLoading } = useProduct();
   useEffect(() => {
     const fetchProducts = async () => {
@@ -125,12 +113,6 @@ function Products({ selectedCategory, selectedPriceRange }) {
                   >
                     Add to cart
                   </button>
-                  <i
-                    onClick={() => {
-                      addToWish(product.id);
-                    }}
-                    className="fa-solid fa-heart text-danger"
-                  ></i>
                 </div>
 
                 <Link

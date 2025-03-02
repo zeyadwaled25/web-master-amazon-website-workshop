@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 
 function FilterNavbar({ setSpecialCategory, setSelectedPriceRange }) {
   const [categories, setCategories] = useState([]);
@@ -20,6 +21,10 @@ function FilterNavbar({ setSpecialCategory, setSelectedPriceRange }) {
 
   return (
     <>
+    <div className="">  
+    <button className=" rounded-2 border-1 mb-3">
+    <i class="fa-solid fa-heart me-3 text-danger "></i> 
+          <Link to={'./wishlist'} className=" text-dark">Wish List</Link> </button>
       <button 
         className="filter-btn btn btn-primary" 
         onClick={() => setShowFilters(!showFilters)}
@@ -63,6 +68,8 @@ function FilterNavbar({ setSpecialCategory, setSelectedPriceRange }) {
           </ul>
         </div>
       </div>
+    </div>
+
     </>
   )
 }

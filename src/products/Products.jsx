@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../Context/CartContext";
 import { WishlistContext } from "../Context/WishlistContext"; // Import WishlistContext
-import useProduct from "../Hooks/UseProduct";
+import useProduct from "../hooks/UseProduct";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import { FaHeart, FaRegHeart } from "react-icons/fa"; // Import heart icons

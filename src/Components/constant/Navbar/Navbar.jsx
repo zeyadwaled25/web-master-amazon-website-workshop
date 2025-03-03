@@ -21,7 +21,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-2 px-lg-5 py-2">
       <div className="container-fluid">
         {/* Left Section - Logo & Location */}
-        <Link className="navbar-brand d-flex align-items-center" to={"/"}>
+        <Link className="navbar-brand d-flex align-items-center" to={"/home"}>
           <img
             src="src\assets\Amazon.png"
             alt="Amazon Logo"

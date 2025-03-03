@@ -24,10 +24,13 @@ function App() {
           <CartContextProvider>
             <WishlistContextProvider> {/* Wrap with WishlistContextProvider */}
               <Routes>
-                <Route path="/Login" element={<Login />} />
+                <Route path="/login" element={<Login />} />
                 <Route path="/Register" element={<Register />} />
                 <Route>
-                  <Route path="/" element={<Home />} />
+                  <Route path="/" element={<Login />} />
+                  <Route path="/home" element={<Home />} />
+                 
+
                   <Route path="/products" element={<ProductsPage />} />
                   <Route path="/cart" element={<Cart />} />
                   <Route path="/checkout" element={<Checkout />} />

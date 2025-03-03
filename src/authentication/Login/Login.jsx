@@ -39,7 +39,7 @@ function Login() {
 
       if (response.success) {
           alert(response.message);
-          navigate("/"); // Redirect after successful login
+          navigate("/home"); // Redirect after successful login
           setIsLoggedIn(true)
       } else {
           alert(response.message); // Show error message
@@ -51,7 +51,8 @@ function Login() {
   }
   return (
     <>
-      <div className="container register   d-flex justify-content-center align-items-center flex-column mb-1 w-50 p-2 rounded rounded-3 border-black border-1 border mt-1">
+    <div className="body  py-5">
+    <div className="container register  d-flex justify-content-center align-items-center flex-column mb-1 w-50 p-2 rounded rounded-3 border-black border-1 border mt-1">
         <div className="w-25">
           <img src={amazon} alt="amazon-logo" className="w-100" srcSet="" />
         </div>
@@ -105,6 +106,8 @@ function Login() {
               <button className="btn border border-2 rounded rounded-3" onClick={()=>navigate("/Register")}>Create your Amazon account</button>
             </div>
 <Footer/>     
+    </div>
+      
     </>
   );
 }

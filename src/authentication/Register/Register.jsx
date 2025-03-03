@@ -41,24 +41,26 @@ const navigate=useNavigate()
     try {
       // Ensure the correct object structure
       const userData = {
-          name: values.name,
-          phone: values.phone,
-          password: values.password
+        name: values.name,
+        phone: values.phone,
+        password: values.password
       };
-
-      var response = registerUser(userData); // Pass userData as an object
+  
+      const response = await registerUser(userData); // Pass userData as an object
       alert(response.message);
-      if(alert(response.message)==="User registered successfully!"){
-        navigate('/login')
+  
+      // Check if the registration was successful
+      if (response.message === "User registered successfully!") {
+        navigate('/Login'); // Navigate to the login page
       }
-      
-  } catch (error) {
+    } catch (error) {
       console.error("Error:", error);
-  }
+    }
   }
 
   return (
     <>
+    <div className="body py-5">
     <div className="container register   d-flex justify-content-center align-items-center flex-column mb-1 w-50 p-2 rounded rounded-3 border-black border-1 border mt-1">
      <div className="w-25">
      <img src={amazon} alt="amazon-logo" className='w-100' srcSet="" />
@@ -124,6 +126,8 @@ const navigate=useNavigate()
       </div>
     </div>
      <Footer/>
+    </div>
+  
     </>
   );
 }

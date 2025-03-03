@@ -9,16 +9,19 @@ function MainComponent() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedPriceRange, setSelectedPriceRange] = useState("all");
 
+
   return (
     <>
       <Navbar/>
       <div className="product-page">
-        <FilterNavbar
+      <FilterNavbar
         setSpecialCategory={setSelectedCategory}
-        setSelectedPriceRange={setSelectedPriceRange} />
-        <Products
+        setSelectedPriceRange={setSelectedPriceRange}
+      />
+      <Products
         selectedCategory={selectedCategory}
-        selectedPriceRange={selectedPriceRange} />
+        selectedPriceRange={selectedPriceRange}
+      />
       </div>
       <Footer/>
     </>

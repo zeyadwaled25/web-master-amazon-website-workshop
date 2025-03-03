@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import { CartContext } from "../../context/CartContext";
-import { WishlistContext } from "../../context/WishlistContext";
+import { CartContext } from "../../Context/CartContext";
+import { WishlistContext } from "../../Context/WishlistContext";
 import toast from "react-hot-toast";
 
 function WishItem({ p, setWishDetails, getWishlistCart }) {

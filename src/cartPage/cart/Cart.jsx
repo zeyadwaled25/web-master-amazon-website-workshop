@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useContext } from "react";
-import { CartContext } from "../../context/CartContext";
+import { CartContext } from "../../Context/CartContext";
 import { Link } from "react-router-dom";
-import Navbar from "../../components/constant/Navbar/Navbar";
-import Footer from "../../components/constant/Footer/Footer";
+import Navbar from "../../Components/constant/Navbar/Navbar";
+import Footer from "../../Components/constant/Footer/Footer";
 
 export default function Cart() {
   let { getLoggedUserCart, updateCartItemCount, deleteProductItem,setNumOfCartItems } =

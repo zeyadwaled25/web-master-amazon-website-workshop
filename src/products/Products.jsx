@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-import { CartContext } from "../context/CartContext";
-import { WishlistContext } from "../context/WishlistContext"; // Import WishlistContext
+import { CartContext } from "../Context/CartContext";
+import { WishlistContext } from "../Context/WishlistContext"; // Import WishlistContext
 import useProduct from "../Hooks/UseProduct";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { WishlistContext } from '../../context/WishlistContext'
+import { WishlistContext } from '../../Context/WishlistContext'
 // import { Audio } from 'react-loader-spinner';
 import WishItem from '../WishItem/WishItem';
 

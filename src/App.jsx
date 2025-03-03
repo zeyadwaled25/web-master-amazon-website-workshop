@@ -11,8 +11,8 @@ import ProductDetail from './singelPage/ProductDetail/ProductDetail'
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
-import { CartContextProvider } from './Context/CartContext'; // Import CartContextProvider
-import { WishlistContextProvider } from './Context/WishlistContext'; // Import WishlistContextProvider
+import { CartContextProvider } from './context/CartContext'; // Import CartContextProvider
+import { WishlistContextProvider } from './context/WishlistContext'; // Import WishlistContextProvider
 import Allorders from './Allorders/Allorders'
 
 let query = new QueryClient()

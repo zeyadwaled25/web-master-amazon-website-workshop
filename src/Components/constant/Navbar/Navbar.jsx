@@ -2,11 +2,13 @@ import { CiLocationOn } from "react-icons/ci";
 import "./Navbar.css";
 import { FaSearch } from "react-icons/fa";
 import { useContext } from "react";
-import { AuthContext } from "../../../Context/AuthContext";
+import { AuthContext } from "../../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { CartContext } from "../../../Context/CartContext";
-
+import { CartContext } from "../../../context/CartContext";
+import navImg from './../../../assets/Amazon.png'
+import lang from './../../../assets/lang.png'
+import cart from './../../../assets/cart.png'
 const Navbar = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
   const{numOfCartItems}=useContext(CartContext)
@@ -21,9 +23,9 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-2 px-lg-5 py-2">
       <div className="container-fluid">
         {/* Left Section - Logo & Location */}
-        <Link className="navbar-brand d-flex align-items-center" to={"/home"}>
+        <Link className="navbar-brand d-flex align-items-center" to={"/"}>
           <img
-            src="src\assets\Amazon.png"
+            src={navImg}
             alt="Amazon Logo"
             height="50"
             className="me-2"
@@ -58,7 +60,7 @@ const Navbar = () => {
         {/* Right Section - Account, Orders, Cart */}
         <div className="right d-flex align-items-center text-white ms-3">
           <div className="lang d-flex justify-content-center align-items-center">
-            <img src="src\assets\lang.png" alt="language" />
+            <img src={lang} alt="language" />
             <select>
               <option value="EN" className=" bg-transparent">
                 EN
@@ -81,7 +83,7 @@ const Navbar = () => {
 
           <div className="cart d-flex align-items-center justify-content-center flex-wrap">
           <Link to={'/cart'} className=" text-warning   ">{numOfCartItems}  Cart</Link>
-          <Link to={'/cart'} ><img src="src\assets\cart.png" alt="cart" /></Link>
+          <Link to={'/cart'} ><img src={cart} alt="cart" /></Link>
         
            
             {isLoggedIn && (

@@ -13,7 +13,7 @@ const navigate=useNavigate()
 
 
   const validationSchema = yup.object({
-    name: yup.string().min(3).max(10).required("Name is required"),
+    name: yup.string().min(3).max(40).required("Name is required"),
    phone: yup.string().matches(/^(01)[0125][0-9]{8}$/, "invalid egyptian number format").required("Phone number is required"),
     password: yup
       .string()

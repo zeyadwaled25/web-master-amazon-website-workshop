@@ -1,6 +1,8 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./Slider.css";
+import img1 from './../../../assets/bg1.jfif'
+import img2 from './../../../assets/bg2.jpg'
 
 export default function Slider() {
   return (
@@ -59,7 +61,7 @@ export default function Slider() {
         swipeable
       >
         <img
-          src="src\assets\bg1.jfif"
+          src={img1}
           style={{
             display: "block",
             height: "100%",
@@ -68,7 +70,7 @@ export default function Slider() {
           }}
         />
         <img
-          src="src\assets\bg2.jpg"
+          src={img2}
           style={{
             display: "block",
             height: "100%",

@@ -1,13 +1,31 @@
 import "./section6.css";
 
+// Image imports
+import img1 from "./../../../assets/ra.png";
+import img2 from "./../../../assets/image 152 (1).png";
+import img3 from "./../../../assets/frame 87.png";
+import img4 from "./../../../assets/image (1).png";
+import img5 from "./../../../assets/image 154.png";
+import img6 from "./../../../assets/image 155.png";
+import img7 from "./../../../assets/image 156.png";
+import img8 from "./../../../assets/image 157.png";
+import img9 from "./../../../assets/image 158.png";
+import img10 from "./../../../assets/image 159.png";
+import img11 from "./../../../assets/image 160.png";
+import img12 from "./../../../assets/image 161.png";
+import img13 from "./../../../assets/image 162.png";
+import img14 from "./../../../assets/image 163.png";
+import img15 from "./../../../assets/image 164.png";
+import img16 from "./../../../assets/image 165.png";
+
 export default function Section6() {
   return (
-    <div className=" container-fluid p-0">
-      <div className="row justify-content-around" >
-        <div className="col-12 col-md-6 col-lg-3 mb-4 " >
-          <div className="p-3 bg-white gallery ">
+    <div className="container-fluid p-0">
+      <div className="row justify-content-around">
+        <div className="col-12 col-md-6 col-lg-3 mb-4">
+          <div className="p-3 bg-white gallery">
             <h4>Best Sellers in Toys & Games</h4>
-            <img src="src/assets/ra.png" className="img-fluid" alt="Toy" />
+            <img src={img1} className="img-fluid" alt="Toy" />
             <p>
               Storio Rechargeable Toys Talking Cactus Baby Toys for Kids Dancing
               Cactus Toys…
@@ -27,130 +45,66 @@ export default function Section6() {
               </svg>
             </span>
             <div className="d-flex justify-content-around mt-2">
-              <img
-                src="src/assets/ra.png"
-                className="img-thumbnail"
-                style={{ width: "39px", height: "60px" }}
-                alt="Thumbnail"
-              />
-              <img
-                src="src/assets/image 152 (1).png"
-                className="img-thumbnail"
-                style={{ width: "39px" }}
-                alt="Thumbnail"
-              />
-              <img
-                src="src/assets/frame 87.png"
-                className="img-thumbnail"
-                style={{ width: "39px", height: "60px" }}
-                alt="Thumbnail"
-              />
-              <img
-                src="src/assets/image (1).png"
-                className="img-thumbnail"
-                style={{ width: "39px", height: "60px" }}
-                alt="Thumbnail"
-              />
+              <img src={img1} className="img-thumbnail" style={{ width: "39px", height: "60px" }} alt="Thumbnail" />
+              <img src={img2} className="img-thumbnail" style={{ width: "39px" }} alt="Thumbnail" />
+              <img src={img3} className="img-thumbnail" style={{ width: "39px", height: "60px" }} alt="Thumbnail" />
+              <img src={img4} className="img-thumbnail" style={{ width: "39px", height: "60px" }} alt="Thumbnail" />
             </div>
           </div>
         </div>
 
-        <div className=" col-12 col-md-6 col-lg-3 mb-4">
-          <div className="p-3 bg-white  gallery">
+        <div className="col-12 col-md-6 col-lg-3 mb-4">
+          <div className="p-3 bg-white gallery">
             <h4>Customers’ Most-Loved Products</h4>
             <div className="images">
-              <img
-                src="src/assets/image 154.png"
-                className="img-fluid"
-                alt="Product"
-              />
-              <img
-                src="src/assets/image 155.png"
-                className="img-fluid"
-                alt="Product"
-              />
-              <img
-                src="src/assets/image 156.png"
-                className="img-fluid"
-                alt="Product"
-              />
-              <img src="src/assets/image 157.png" className="" alt="Product" />
-              <p style={{ color: " #1F8394" }}>Explore more</p>
+              <img src={img5} className="img-fluid" alt="Product" />
+              <img src={img6} className="img-fluid" alt="Product" />
+              <img src={img7} className="img-fluid" alt="Product" />
+              <img src={img8} className="" alt="Product" />
+              <p style={{ color: "#1F8394" }}>Explore more</p>
             </div>
           </div>
         </div>
 
         <div className="col-12 col-md-6 col-lg-3 mb-4">
-          <div className="p-3 bg-white  gallery">
+          <div className="p-3 bg-white gallery">
             <h4>Best Sellers in Beauty</h4>
             <div className="images">
-              <img
-                src="src/assets/image 158.png"
-                className="img-fluid"
-                alt="Beauty Product"
-              />
-              <img
-                src="src/assets/image 159.png"
-                className="img-fluid"
-                alt="Beauty Product"
-              />
-              <img
-                src="src/assets/image 160.png"
-                className="img-fluid"
-                alt="Beauty Product"
-              />
-              <img
-                src="src/assets/image 161.png"
-                className="img-fluid"
-                alt="Beauty Product"
-              />
+              <img src={img9} className="img-fluid" alt="Beauty Product" />
+              <img src={img10} className="img-fluid" alt="Beauty Product" />
+              <img src={img11} className="img-fluid" alt="Beauty Product" />
+              <img src={img12} className="img-fluid" alt="Beauty Product" />
             </div>
           </div>
         </div>
 
         <div className="col-12 col-md-6 col-lg-3 mb-4">
-          <div className="p-3 bg-white  gallery">
+          <div className="p-3 bg-white gallery">
             <h4>
               Latest styles | Dresses,
               <br /> kurta & more | 50% -
             </h4>
             <div className="d-flex justify-content-around">
               <div className="text-center images2">
-                <img
-                  src="src/assets/image 162.png"
-                  className="img-fluid"
-                  alt="Kurta"
-                />
+                <img src={img13} className="img-fluid" alt="Kurta" />
                 <p>Kurta & sets</p>
               </div>
               <div className="text-center images2">
-                <img
-                  src="src/assets/image 163.png"
-                  className="img-fluid"
-                  alt="Tops"
-                />
+                <img src={img14} className="img-fluid" alt="Tops" />
                 <p>Tops</p>
               </div>
             </div>
-            <div className="d-flex justify-content-around  mt-2">
+            <div className="d-flex justify-content-around mt-2">
               <div className="text-center images2">
-                <img
-                  src="src/assets/image 164.png"
-                  className="img-fluid"
-                  alt="Dresses"
-                />
+                <img src={img15} className="img-fluid" alt="Dresses" />
                 <p>Dresses</p>
               </div>
               <div className="text-center images2">
-                <img
-                  src="src/assets/image 165.png"
-                  className="img-fluid"
-                  alt="Sarees"
-                />
+                <img src={img16} className="img-fluid" alt="Sarees" />
                 <p>Sarees</p>
               </div>
             </div>
-            <p className="text-start " style={{ color: " #1F8394" }}>
+            <p className="text-start" style={{ color: "#1F8394" }}>
               See more
             </p>
           </div>

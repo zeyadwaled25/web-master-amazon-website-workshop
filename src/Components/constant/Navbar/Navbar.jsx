@@ -2,10 +2,10 @@ import { CiLocationOn } from "react-icons/ci";
 import "./Navbar.css";
 import { FaSearch } from "react-icons/fa";
 import { useContext } from "react";
-import { AuthContext } from "../../../context/AuthContext";
+import { AuthContext } from "./../../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { CartContext } from "../../../context/CartContext";
+import { CartContext } from "./../../../Context/CartContext";
 import navImg from './../../../assets/Amazon.png'
 import lang from './../../../assets/lang.png'
 import cart from './../../../assets/cart.png'
